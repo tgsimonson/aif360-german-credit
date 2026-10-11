@@ -1,0 +1,22 @@
+# virtual environments
+.venv/
+.venv-*/
+venv/
+env/
+
+# python bytecode and caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# assignment write-up goes to the lms, not the repo
+*.docx
+*.pdf
+~$*
+
+# os and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log

@@ -1,0 +1,19 @@
+AI Fairness 360: German credit, protected attribute = age
+Applicants: 1000 total, 851 age >= 25 (privileged), 149 age < 25 (unprivileged)
+Mitigation: Reweighing (Kamiran & Calders), pre-processing
+
+Metric                                          Original         Mitigated    Fair
+----------------------------------------------------------------------------------
+DATASET (all 1,000 applicants)
+  Favorable rate, age >= 25                       0.7192            0.7000       -
+  Favorable rate, age < 25                        0.5906            0.7000       -
+  Statistical parity difference                  -0.1285            0.0000    0.00
+  Disparate impact                                0.8212            1.0000    1.00
+
+CREDIT MODEL (logistic regression, mean ± SD over 20 test splits)
+  Accuracy                                0.7520 ± 0.021    0.7472 ± 0.020  higher
+  Balanced accuracy                       0.6755 ± 0.027    0.6673 ± 0.024  higher
+  Statistical parity difference          -0.2153 ± 0.089   -0.0664 ± 0.104    0.00
+  Disparate impact                        0.7304 ± 0.107    0.9157 ± 0.133    1.00
+  Equal opportunity difference           -0.2137 ± 0.085   -0.0881 ± 0.092    0.00
+  Average odds difference                -0.1607 ± 0.098   -0.0055 ± 0.108    0.00

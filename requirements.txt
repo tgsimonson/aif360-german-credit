@@ -1,0 +1,8 @@
+# dependencies for german_credit_bias.py (python 3.11 to 3.14)
+# install with: pip install -r requirements.txt
+aif360==0.6.1
+numpy==2.4.6
+pandas==3.0.6
+scikit-learn==1.9.1
+scipy==1.17.1
+matplotlib==3.11.2
